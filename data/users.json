@@ -1,0 +1,79 @@
+[
+  {
+    "id": "7d8a4020-15f6-4b89-b9f2-9c5ccda51bd0",
+    "username": "admin",
+    "full_name": "Administrateur",
+    "role": "admin",
+    "zone_id": null,
+    "supervisor_id": null,
+    "password_hash": "scrypt:32768:8:1$S2GgKwr75cGzb9IP$ccb0b94a91c1b7e0d2157560339d5bdee6c8c499d1b83b75259948e40aa1ca3cb12475130b617c06ac6d4065fdfae72d7763c62ab2b33eba8b1c217d51588811",
+    "created_at": "2025-12-21T01:26:13.628942+00:00",
+    "is_active": true
+  },
+  {
+    "id": "ef285f32-6588-403d-81dd-e18f557d2e02",
+    "username": "sup_001",
+    "full_name": "Terrance Koffi",
+    "role": "supervisor",
+    "zone_id": "97339127-b742-4058-afc7-6a06348c55ec",
+    "supervisor_id": null,
+    "password_hash": "scrypt:32768:8:1$pyJ55MFwuVjSLx45$95b9b1b61f79f3ca6cb408f5cc88c261e0c969bd8b120ac5c521e7b809cca306f8c80ada254d176d6da8f1b978ff25eb1a3bf366780224b6542e67dd6d3ec8d9",
+    "created_at": "2025-12-21T22:18:41.861324+00:00",
+    "is_active": true
+  },
+  {
+    "id": "5511947b-93ab-43f1-a5f7-a82c7534f48e",
+    "username": "agent_01",
+    "full_name": "Vares Kouao",
+    "role": "agent",
+    "zone_id": "97339127-b742-4058-afc7-6a06348c55ec",
+    "supervisor_id": "ef285f32-6588-403d-81dd-e18f557d2e02",
+    "password_hash": "scrypt:32768:8:1$87lM0maJmJX3sFcb$585d755d077d501c62dfcc6c4f448e4c9f601fdb22f7e31854d2156711e1b5f71c91e6d0bd4af911545991bed62c3fa14059dd653cdf207d2580804d2927b2c4",
+    "created_at": "2025-12-21T22:19:16.907871+00:00",
+    "is_active": true
+  },
+  {
+    "id": "b52ffe17-4271-4c94-bc50-babc98ebc59b",
+    "username": "Waren",
+    "full_name": "Budd",
+    "role": "agent",
+    "zone_id": "97339127-b742-4058-afc7-6a06348c55ec",
+    "supervisor_id": "ef285f32-6588-403d-81dd-e18f557d2e02",
+    "password_hash": "scrypt:32768:8:1$0Bt0ZwOmc4cXqfcL$212aeb38645d2e191ebf6be83ec087f0923aa4e05102c8a0dee87248ae4eacdb80b3a1a355b7d52380d82cdf8d75ad5324b73b1a8d4de110464f457f57fa2f4e",
+    "created_at": "2025-12-24T21:53:27.057472+00:00",
+    "is_active": true
+  },
+  {
+    "id": "64f07a11-5234-4c7b-8c08-5ac659d9e779",
+    "username": "terrance",
+    "full_name": "Terrance Freeman",
+    "role": "agent",
+    "zone_id": "97339127-b742-4058-afc7-6a06348c55ec",
+    "supervisor_id": "ef285f32-6588-403d-81dd-e18f557d2e02",
+    "password_hash": "scrypt:32768:8:1$WfyaehTvIYxzU5Iv$5b89a4223fab532d1a20271205f041019100f27d3f0dd61e672583783c71aa3558c916b9531b3130d75e8bcf62ab625c7f76c0b8be96202c1e759584dea5f76f",
+    "created_at": "2025-12-24T23:26:32.573263+00:00",
+    "is_active": true
+  },
+  {
+    "id": "deac702a-6e54-46fe-bff0-b1ea691ee2fe",
+    "username": "crossben",
+    "full_name": "Kobenan Cross",
+    "role": "supervisor",
+    "zone_id": "0eb02739-9704-4a18-9e08-c5a9aa4be87b",
+    "supervisor_id": null,
+    "password_hash": "scrypt:32768:8:1$jTsvmh9sjaeP2sbu$6a32d14b4b50c6a423944b8210b0c9d9d928f5e0d013f00d9c0bbf605eba46da1deaf79d0d35bd90fb61fc4e9eed6ab3d4ee4e86391b4e5234741f026ee61068",
+    "created_at": "2025-12-24T23:33:04.744674+00:00",
+    "is_active": true
+  },
+  {
+    "id": "6cd605f7-abb0-428d-b460-8b3d08d96ed8",
+    "username": "alberto",
+    "full_name": "Albert Toti",
+    "role": "agent",
+    "zone_id": "0eb02739-9704-4a18-9e08-c5a9aa4be87b",
+    "supervisor_id": "deac702a-6e54-46fe-bff0-b1ea691ee2fe",
+    "password_hash": "scrypt:32768:8:1$EYPGNPTjR1lxtGZb$40a36fe4cf64afd0aab2b921f9a35a5bae388a011863563fbf7c6c3d6d3ee58ac513aa28173b88e89a5bec23291cddf09255daff9e3e270121d2088911d9f6a7",
+    "created_at": "2025-12-24T23:48:51.692519+00:00",
+    "is_active": true
+  }
+]
