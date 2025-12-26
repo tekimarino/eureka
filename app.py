@@ -32,7 +32,7 @@ from werkzeug.utils import secure_filename
 
 # PostgreSQL JSON store (persists data across deployments on DigitalOcean App Platform)
 from db_store import (
-    db_enabled as _db_enabled,
+    enabled,
     ensure_store_ready as _db_ensure_ready,
     kv_get as _kv_get,
     kv_set as _kv_set,
