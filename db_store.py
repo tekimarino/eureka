@@ -1,4 +1,4 @@
-﻿"""PostgreSQL-backed JSON store for the app.
+"""PostgreSQL-backed JSON store for the app.
 
 This app was originally file-based (data/*.json). On platforms like DigitalOcean App Platform,
 local disk is ephemeral across deployments. To prevent data loss, we store each dataset inside
@@ -20,8 +20,6 @@ from typing import Any, Optional
 import psycopg2
 from psycopg2.extras import Json
 
-db_enabled = bool(__import__('os').environ.get('DATABASE_URL'))  # fallback
-
 
 def _dsn() -> Optional[str]:
     return os.getenv("DATABASE_URL")
@@ -30,6 +28,14 @@ def _dsn() -> Optional[str]:
 def enabled() -> bool:
     return bool(_dsn())
 
+
+
+def db_enabled() -> bool:
+    """Backward-compatible alias for `enabled()`.
+
+    Some deployments import `db_enabled` from this module. Keep both names stable.
+    """
+    return enabled()
 
 def connect():
     """Create a new DB connection."""
@@ -110,4 +116,3 @@ def keys() -> list[str]:
         with conn.cursor() as cur:
             cur.execute("SELECT k FROM public.kv_store ORDER BY k")
             return [r[0] for r in cur.fetchall()]
-
