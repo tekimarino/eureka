@@ -57,7 +57,14 @@ def _connect():
         raise RuntimeError("PostgreSQL not configured (missing DATABASE_URL / PG* env vars).")
 
     # SSL defaults: require in managed DBs
-    sslmode = os.getenv("PGSSLMODE", "require")
+    # SSL: DO Managed DB nécessite SSL, mais un Postgres local n'en a souvent pas.
+    sslmode = os.getenv("PGSSLMODE")
+    if not sslmode:
+        host_hint = os.getenv("PGHOST", "")
+        if host_hint in ("localhost", "127.0.0.1") or host_hint.startswith("127."):
+            sslmode = "disable"
+        else:
+            sslmode = "require"
 
     kwargs = {"sslmode": sslmode}
 
