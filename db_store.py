@@ -116,3 +116,9 @@ def keys() -> list[str]:
         with conn.cursor() as cur:
             cur.execute("SELECT k FROM public.kv_store ORDER BY k")
             return [r[0] for r in cur.fetchall()]
+
+
+# Backward-compatible alias expected by app.py
+def ensure_store_ready():
+    """Ensure DB-backed KV store is ready (compat shim)."""
+    return ensure_schema()
