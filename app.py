@@ -44,7 +44,8 @@ from db_store import (
 _db_enabled = db_enabled
 
 # Sécurise la table kv_store au démarrage
-ensure_store_ready()
+if db_enabled():
+    ensure_store_ready()
 
 
 
