@@ -66,7 +66,6 @@ def _connect():
 
     return psycopg2.connect(dsn, **kwargs)
 
-
 # ---------- KV store API ----------
 
 def ensure_store_ready() -> None:
