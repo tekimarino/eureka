@@ -50,7 +50,6 @@ def db_enabled() -> bool:
     """
     return _dsn() is not None
 
-
 def _connect():
     dsn = _dsn()
     if not dsn:
@@ -58,7 +57,6 @@ def _connect():
 
     # SSL defaults: require in managed DBs
     sslmode = os.getenv("PGSSLMODE", "require")
-
     kwargs = {"sslmode": sslmode}
 
     # Optional CA cert (DigitalOcean provides a CA bundle sometimes)
