@@ -31,24 +31,26 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.utils import secure_filename
 
 # PostgreSQL JSON store (persists data across deployments on DigitalOcean App Platform)
-from db_store import (
-    ensure_store_ready,
-    db_enabled,
-    kv_get,
-    kv_set,
-    kv_delete,
-    kv_keys,
-)
+try:
+    from db_store import (
+        ensure_store_ready,
+        db_enabled,
+        kv_get,
+        kv_set,
+        kv_delete,
+        kv_keys,
+    )
+except ImportError as e:
+    raise ImportError(
+        "db_store import failed. Ensure your repository contains the updated db_store.py "
+        "exporting: ensure_store_ready, db_enabled, kv_get, kv_set, kv_delete, kv_keys."
+    ) from e
 
-# Compat : si ton code appelle encore _db_enabled(...)
+# Compat: si ton code appelle encore _db_enabled(...)
 _db_enabled = db_enabled
 
 # Sécurise la table kv_store au démarrage
-if db_enabled():
-    ensure_store_ready()
-
-
-
+ensure_store_ready()
 
 # ----------------------------
 # Pagination helper
